@@ -2,3 +2,5 @@
 .idea/
 test/
 cmake-build-debug/
+cmake-build-debug-wsl/
+.venv/
