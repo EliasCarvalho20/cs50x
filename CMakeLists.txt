@@ -3,9 +3,7 @@ project(cs50 C)
 
 set(CMAKE_C_STANDARD 23)
 
-# set(PROJECT_SOURCE_DIR  "/home/elias/projetos/cs50/problems/2024/x/")
 set(PROJECT_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
-
 
 # Recover
 #set(Sources ${PROJECT_SOURCE_DIR}/recover/recover.c)
@@ -16,12 +14,6 @@ set(PROJECT_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}")
 
 # Recover
 #set(Sources ${PROJECT_SOURCE_DIR}/inheritance/inheritance.c)
-
-
-set(Headers "${PROJECT_SOURCE_DIR}/problems/2024/x/speller/dictionary.h")
-set(Sources "${PROJECT_SOURCE_DIR}/problems/2024/x/speller/dictionary.c"
-        "${PROJECT_SOURCE_DIR}/problems/2024/x/speller/speller.c")
-
 
 add_executable(cs50 ${Sources} ${Headers})
 
