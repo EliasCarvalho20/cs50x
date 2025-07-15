@@ -1,0 +1,146 @@
+html {
+	height: 100%;
+}
+
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	background-color: #000;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+.container {
+	flex: 1;
+	justify-content: center;
+	color: white;
+	margin: 100px auto;
+	width: 700px;
+}
+
+.where-to-watch {
+	color: white;
+	margin: 100px auto;
+	width: 200px;
+}
+
+.links-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	width: 100px;
+}
+
+blockquote {
+	color: red;
+}
+
+img {
+	width: 60%;
+}
+
+.star {
+	height: 6%;
+	width: 6%;
+}
+
+.rating-container {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	margin: 0 auto;
+	width: 400px;
+}
+
+.rating {
+	color: red;
+	flex-wrap: wrap;
+	font-size: 18px;
+}
+
+footer {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	margin: 0 auto 50px;
+	width: 400px;
+}
+
+a {
+	color: #ff0000;
+	text-decoration: none;
+	margin: 0 2%;
+}
+
+a::after {
+	background: white;
+	content: '';
+	display: block;
+	height: 2px;
+	margin-top: 5px;
+	right: 0;
+	transition: width 0.3s ease;
+	-webkit-transition: width 0.3s ease;
+	width: 0;
+}
+
+a:hover::after {
+	background-color: white;
+	left: 0;
+	width: 100%;
+}
+
+.wrong {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	width: 50px;
+}
+
+@keyframes upAndDown {
+	0%   { transform: translateY(0px); }
+	20%  { transform: translateY(20px); }
+	40%  { transform: translateY(40px); }
+	60%  { transform: translateY(60px); }
+	80%  { transform: translateY(40px); }
+	100% { transform: translateY(0px); }
+}
+
+@keyframes leftAndRight {
+	0%   { transform: translateX(0px); }
+	20%  { transform: translateX(20px); }
+	40%  { transform: translateX(40px); }
+	60%  { transform: translateX(60px); }
+	80%  { transform: translateX(40px); }
+	100% { transform: translateX(0px); }
+}
+
+.wrong > p:nth-child(odd) {
+	animation: upAndDown 10s infinite;
+	color: red;
+	align-self: flex-end;
+}
+
+.wrong > p:nth-child(even) {
+	animation: leftAndRight 10s infinite;
+	color: white;
+	align-self: flex-start;
+}
+
+.wrong > p > span {
+	display: inline-block;
+	transition: transform 0.3s ease-in-out, color 0.3s ease;
+}
+
+.wrong > p:nth-child(odd):hover > span {
+	color: white;
+	transform: rotate3d(2, -1, -1, -0.2turn);
+	}
+
+.wrong > p:nth-child(even):hover > span {
+	color: red;
+	transform: scale3d(-1.4, 0.8, 0.7);
+}
